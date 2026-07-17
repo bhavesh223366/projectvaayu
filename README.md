@@ -125,7 +125,7 @@ We decided to try fine-tuning an FPN model.
 #### Verdict:
 FPNs only performed well for roads. When it came to water bodies, due to the lack of training data, it was not able to learn enough from the data. For buildings, it seemed to face the same problem that Detectron2 faced - it was generating very blotchy outputs. This was a general problem we faced with all of our segmentation models and architectures that we tried. Even UNet, the architecture that ended up winning the competition, showed the same issues in our early testing.
 
-## Aaand finally, the winner is....
+## Better Solution
 UNet++. It was always UNet! Seeing UNet get the best performance on this task and also seeing it win the entire competition was like a back-to-basics moment for me. Sometimes, the simplest solution is the correct solution. 
 
 UNet++ (U-Net with Nested Skip Pathways) is an advanced architecture for image segmentation tasks, primarily used in medical imaging and computer vision. It builds upon the original U-Net model by enhancing its skip connections through nested pathways. This structure allows the network to capture more fine-grained features at various resolutions, improving segmentation accuracy. The key innovation of UNet++ is the introduction of dense skip pathways and deep supervision, which helps refine the features learned at different levels and improves the overall performance of the model. This makes UNet++ particularly effective for complex segmentation tasks where precise details are critical.
